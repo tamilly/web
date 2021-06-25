@@ -1,18 +1,6 @@
-<html>
-    <head>
-        <title>PWEB</title>
-    </head>
-    <body>
-        <h2>Registration Page</h2>
-        <a href="index.php">Click here to go back</a> <br/><br/>
-        <form action="register.php" method="POST">
-            Enter name: <input type="text" name="name" required="required"/> <br/>
-            Enter phone: <input type="text" name="phone" required="required"/> <br/>
-            <input type="submit" value="Register"/>
-        </form>
-    </body>
-</html>
 <?php
+    session_start();
+    
     if($_SERVER["REQUEST_METHOD"] == "POST"){ //checks if the form has received a POST method
         $name = $_POST['name'];
         $phone = $_POST['phone'];
