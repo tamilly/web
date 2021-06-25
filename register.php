@@ -28,12 +28,15 @@
         /*else{
             echo "that's ok, baby";
         }*/
+        $sql = "INSERT INTO users VALUES('$name', '$phone')";
 
-        $query = mysqli_query($con, "SELECT * FROM users");
-        if($query){
-            echo "Returned rows are: ". mysqli_num_rows($query);
-            mysqli_free_result($query);
+        if(mysqli_query($con, $sql)){
+            echo "it's ok, baby <br/>";
+            echo n12br("\n$name\n$phone");
+        }else{
+            echo "Sorry $sql";
         }
+        //close connection
+        mysqli_close($con);
     }
-    mysqli_close($con);
 ?>
