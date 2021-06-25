@@ -1,9 +1,12 @@
 <?php
     session_start();
-    
+
     if($_SERVER["REQUEST_METHOD"] == "POST"){ //checks if the form has received a POST method
         $name = $_POST['name'];
         $phone = $_POST['phone'];
+        //trying something...
+        $_SESSION["name"] = $name;
+        $_SESSION["phone"] = $phone;
         //test
         echo "Name entered is: ". $name ."<br/>";
         echo "Phone entered is: ". $phone;
@@ -41,3 +44,4 @@
         mysqli_close($con);
     }
 ?>
+<a href="display.php">Click here to see data </a>
