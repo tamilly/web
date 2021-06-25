@@ -28,7 +28,7 @@
         /*else{
             echo "that's ok, baby";
         }*/
-        $sql = "INSERT INTO users VALUES('$name', '$phone')";
+        $sql = "INSERT INTO users VALUES('1','$name', '$phone')";
 
         if(mysqli_query($con, $sql)){
             echo "it's ok, baby <br/>";
