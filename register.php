@@ -13,23 +13,27 @@
     </body>
 </html>
 <?php
-    if($_SERVER["REQUEST_METHOD"] == "POST"){ //Checks if the form has received a POST method
+    if($_SERVER["REQUEST_METHOD"] == "POST"){ //checks if the form has received a POST method
         $name = $_POST['name'];
         $phone = $_POST['phone'];
-
+        //test
         echo "Name entered is: ". $name ."<br/>";
         echo "Phone entered is: ". $phone;
-
-        $bool = true;
-
+        //create connection
         $con = mysqli_connect("localhost", "root", "", "pweb");
         //check connection
-        if(mysqli_connect_errno()){
-            echo "Failed to connect to database: ". mysqli_connect_error();
-            exit();
+        if(!$con){
+            die("Connection failed: ". mysqli_connect_error());
         }
         /*else{
             echo "that's ok, baby";
         }*/
+
+        $query = mysqli_query($con, "SELECT * FROM users");
+        if($query){
+            echo "Returned rows are: ". mysqli_num_rows($query);
+            mysqli_free_result($query);
+        }
     }
+    mysqli_close($con);
 ?>
