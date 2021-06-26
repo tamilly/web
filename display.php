@@ -1,11 +1,14 @@
 <?php
     session_start();
-    echo "Data stored on sessions: ";
+    echo "Data stored on sessions:<br/>";
+?>
+    <img src="img/data.png" title="Commander Data" align="right" style="width:600px;heigth:600px;">
+<?php   
     print_r($_SESSION["name"]);
     echo "<br/>";
     print_r($_SESSION["phone"]);
 
-    echo "<br/> Now let's see data stored on Database: ";
+    echo "<br/> Now let's see data stored on Database: <br/>";
 
     //create connection
     $con = mysqli_connect("localhost", "root", "", "pweb");

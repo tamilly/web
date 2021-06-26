@@ -1,3 +1,7 @@
+<!-- 
+    Working on LOGIN page
+    Need to change the database, then update this file
+-->
 <html>
     <head>
         <title>PWEB</title>
@@ -5,7 +9,7 @@
     <body>
         <h2>Login Page</h2>
         <a href="index.php">Click here to go back</a><br/><br/>
-        <form action="checklogin.php" method="post">
+        <form action="checklogin.php" method="POST">
             Enter Username: <input type="text" name="username" required="required"/> <br/>
             Enter Password: <input type="password" name="password" required="required"/> <br/>
             <input type="submit" value="Login"/>

@@ -6,9 +6,9 @@
     </head>
     <body>
         <?php
-            echo "<p>Hello, World!</p>";
+            echo "<p>Hello, Human!</p>";
         ?>
-        <a href="login.php">Click here to login</a><br/>
+        <!--<a href="login.php">Click here to login</a><br/>-->
         <a href="form.html">Click here to register</a>
     </body>
 </html>
