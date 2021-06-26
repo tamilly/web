@@ -1,16 +1,18 @@
 <?php
     //create class
     Class Person{
-        public $name = "Mr Spock";
-        public $age = 42;
+        public $name = "opa";
+        public $age;
 
 
         function getName(){
-            echo "$this->name";
+            return $this->name;
         }
     }
 
     $person1 = new Person();
-    $person1->getName();
+    $name = $person1->getName();
+    echo "$name";
+
 ?>
 
